@@ -4,7 +4,8 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const BlogDetails = () => {
     const {id} = useParams();
-    const {data:blog, error, isPending} = useFetch('https://json-server-ashen-rho.vercel.app/blogs' + id);
+    const {data:blog, error, isPending} = useFetch(`https://json-server-ashen-rho.vercel.app/blogs/${id}`);
+
     const history = useHistory();
 
     const handleClick = () =>{
