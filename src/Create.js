@@ -13,7 +13,7 @@ const Create = () => {
         const blog = {tittle, body ,author};
         setIsPending(true)
 
-        fetch('http://localhost:8000/blogs/', {
+        fetch('https://json-server-ashen-rho.vercel.app/blogs', {
             method:'POST',
             headers: {"content-Type" : "application/json"},
             body: JSON.stringify(blog)
